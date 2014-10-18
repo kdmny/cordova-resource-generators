@@ -4,7 +4,7 @@
 # Are you looking at this in your web browser, and would like to install?
 # Just open up your terminal and type:
 #
-#  curl https://raw.githubusercontent.com/busterc/cordova-resource-generators/master/install.sh | sh
+#  curl https://raw.githubusercontent.com/kdmny/cordova-resource-generators/master/install.sh | sh
 #
 # Currently supports Mac OS X
 
@@ -20,7 +20,7 @@ if [ "$UNAME" != "Darwin" ] ; then
 	exit 1
 fi
 
-INSTALL_URL="https://raw.githubusercontent.com/busterc/cordova-resource-generators/master"
+INSTALL_URL="https://raw.githubusercontent.com/kdmny/cordova-resource-generators/master"
 PREFIX="/usr/local"
 INSTALL_BIN="$PREFIX/bin"
 
