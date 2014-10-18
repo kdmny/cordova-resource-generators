@@ -16,7 +16,7 @@ Quickly generate mobile app icons and splash screens for Cordova builds and have
 
 ## Installation on OS X
 ```sh
-$ curl https://raw.githubusercontent.com/busterc/cordova-resource-generators/master/install.sh | sh
+$ curl https://raw.githubusercontent.com/kdmny/cordova-resource-generators/master/install.sh | sh
 ```
 _By all means, examine the [install.sh](install.sh) file before installing._
 
