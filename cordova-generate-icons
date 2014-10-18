@@ -58,7 +58,7 @@ function iosConvertIcon() {
 	$convert -resize 1024x1024 "$output/ios/iTunesArtwork@2x.png"
 
 	function iosCopyIcon() {
-		cp $(find . | grep "resources/icon/ios/.*\.png") "$(find . -type d | grep 'platforms/ios/.*Resources/icons')"
+		cp $(find . | grep "resources/icon/ios/.*\.png") "$(find ./platforms -type d | grep 'platforms/ios/.*Resources/icons')"
 	}
 	iosCopyIcon
 }
