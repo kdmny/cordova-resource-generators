@@ -25,15 +25,15 @@ function androidConvertSplash() {
 	drawables=drawable-land-ldpi,drawable-land-mdpi,drawable-land-hdpi,drawable-land-xhdpi,drawable-port-ldpi,drawable-port-mdpi,drawable-port-hdpi,drawable-port-xhdpi
 	eval mkdir -p "$output/android/{$drawables}"
 
- 	$convert -resize 512x512 -extent 720x1280 "$output/android/drawable-port-xhdpi/screen.png"
- 	$convert -resize 256x256 -extent 480x800 "$output/android/drawable-port-hdpi/screen.png"
- 	$convert -resize 256x256 -extent 320x480 "$output/android/drawable-port-mdpi/screen.png"
- 	$convert -resize 128x128 -extent 200x320 "$output/android/drawable-port-ldpi/screen.png"
+ 	$convert -resize 1280x1280 -extent 720x1280 "$output/android/drawable-port-xhdpi/screen.png"
+ 	$convert -resize 800x800 -extent 480x800 "$output/android/drawable-port-hdpi/screen.png"
+ 	$convert -resize 480x480 -extent 320x480 "$output/android/drawable-port-mdpi/screen.png"
+ 	$convert -resize 320x320 -extent 200x320 "$output/android/drawable-port-ldpi/screen.png"
 
- 	$convert -resize 512x512 -extent 1280x720 "$output/android/drawable-land-xhdpi/screen.png"
- 	$convert -resize 256x256 -extent 800x480 "$output/android/drawable-land-hdpi/screen.png"
- 	$convert -resize 256x256 -extent 480x320 "$output/android/drawable-land-mdpi/screen.png"
- 	$convert -resize 128x128 -extent 320x200 "$output/android/drawable-land-ldpi/screen.png"
+ 	$convert -resize 1280x1280 -extent 1280x720 "$output/android/drawable-land-xhdpi/screen.png"
+ 	$convert -resize 800x800 -extent 800x480 "$output/android/drawable-land-hdpi/screen.png"
+ 	$convert -resize 480x480 -extent 480x320 "$output/android/drawable-land-mdpi/screen.png"
+ 	$convert -resize 320x320 -extent 320x200 "$output/android/drawable-land-ldpi/screen.png"
 
 	function androidCopySplash() {
 		androidOutput=$(find . -type d | grep "platforms/android/res$")
