@@ -44,13 +44,13 @@ function androidConvertSplash() {
 androidConvertSplash
 
 function iosConvertSplash() {
-	$convert -resize 512x512 -extent 640x1136 "$output/ios/Default-568h@2x~iphone.png"
-	$convert -resize 1024x1024 -extent 2048x1496 "$output/ios/Default-Landscape@2x~ipad.png"
-	$convert -resize 512x512 -extent 1024x748 "$output/ios/Default-Landscape~ipad.png"
-	$convert -resize 1024x1024 -extent 1536x2008 "$output/ios/Default-Portrait@2x~ipad.png"
-	$convert -resize 512x512 -extent 768x1004 "$output/ios/Default-Portrait~ipad.png"
-	$convert -resize 256x256 -extent 320x480 "$output/ios/Default~iphone.png"
-	$convert -resize 256x256 -extent 640x960 "$output/ios/Default@2x~iphone.png"
+	$convert -resize 1136x1136 -extent 640x1136 "$output/ios/Default-568h@2x~iphone.png"
+	$convert -resize 2048x2048 -extent 2048x1496 "$output/ios/Default-Landscape@2x~ipad.png"
+	$convert -resize 1024x1024 -extent 1024x748 "$output/ios/Default-Landscape~ipad.png"
+	$convert -resize 2008x2008 -extent 1536x2008 "$output/ios/Default-Portrait@2x~ipad.png"
+	$convert -resize 1004x1004 -extent 768x1004 "$output/ios/Default-Portrait~ipad.png"
+	$convert -resize 480x480 -extent 320x480 "$output/ios/Default~iphone.png"
+	$convert -resize 960x960 -extent 640x960 "$output/ios/Default@2x~iphone.png"
 
 	function iosCopySplash() {
 		cp $(find . | grep "resources/splash/ios/.*\.png") "$(find ./platforms -type d | grep 'platforms/ios/.*/Resources/splash')"
